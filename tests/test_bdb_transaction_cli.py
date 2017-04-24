@@ -23,7 +23,7 @@ PRIV2 = 'HrQWRzMwGfLJHkQsaXMef7beMTV4M5aynK4Xm1roFq5V'
 
 
 OUTPUT2 = {
-    'amount': 1,
+    'amount': '1',
     'condition': {
         'details': {
             'bitmask': 32,
@@ -44,7 +44,7 @@ ASSET = {
 
 
 TX_CREATE = {
-    'id': '211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23',
+    'id': '68f785eec8ff920cfabd8b0ca413346c32218b812eb8ee462c0b8e6903082cb2',
     'outputs': [OUTPUT2],
     'metadata': None,
     'asset': ASSET,
@@ -82,13 +82,13 @@ INPUT2 = {
 
 
 TX_CREATE_SIGNED = {
-    'id': '211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23',
+    'id': TX_CREATE['id'],
     'outputs': [OUTPUT2],
     'metadata': None,
     'asset': ASSET,
     'inputs': [
         {
-            'fulfillment': 'cf:4:HvQ3Eg9U6Crw-DFf2v36GaPYsEMLhBSSZEuXNQ6cZFg_VYOJkaCa1_BPAG6N0PecTkqVjMUhGs9nsNosiizZ4wU1Kws2nKSEkoVejpLdn6KQUbKzs-5l_MiRQarJhikC',  # noqa
+            'fulfillment': 'cf:4:HvQ3Eg9U6Crw-DFf2v36GaPYsEMLhBSSZEuXNQ6cZFjyYG9ZSyGy96ckaKCQcPiH9B_qqR-20iAlI5FruxRVP3-mle3-0cGc73TsUtdXYWUsW_fsAkhB7xoIWwf1h10C',  # noqa
             'fulfills': None,
             'owners_before': [PUB1]
         }
@@ -99,7 +99,7 @@ TX_CREATE_SIGNED = {
 
 
 TX_TRANSFER = {
-    'id': '7d59c009ecead6b851007d6c1259f22e7feba713108c8d8ffca60637083199bc',
+    'id': '8c1c0834c3be9ec9a66bcab3f7eb8d93f0c9479d21cc280ffae4effd28b06c14',
     'operation': 'TRANSFER',
     'outputs': [OUTPUT2],
     'inputs': [INPUT2],

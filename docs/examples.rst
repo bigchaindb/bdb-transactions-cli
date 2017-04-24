@@ -11,7 +11,7 @@ create
 .. code-block:: shell
 
    $ OUTPUTS='{
-       "amount": 1,
+       "amount": "1",
        "condition": {
            "details": {
                "bitmask": 32,
@@ -38,7 +38,7 @@ create_with_asset
 .. code-block:: shell
 
    $ OUTPUTS='{
-       "amount": 1,
+       "amount": "1",
        "condition": {
            "details": {
                "bitmask": 32,
@@ -100,10 +100,9 @@ get_asset
 
    $ TRANSACTION='{
        "asset": {
-           "data": null,
-           "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23"
+           "data": null
        },
-       "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23",
+       "id": "68f785eec8ff920cfabd8b0ca413346c32218b812eb8ee462c0b8e6903082cb2",
        "inputs": [
            {
                "fulfillment": {
@@ -123,7 +122,7 @@ get_asset
        "operation": "CREATE",
        "outputs": [
            {
-               "amount": 1,
+               "amount": "1",
                "condition": {
                    "details": {
                        "bitmask": 32,
@@ -139,7 +138,7 @@ get_asset
                ]
            }
        ],
-       "version": "0.9"
+       "version": "0.11"
    }'
 
 
@@ -154,10 +153,9 @@ sign
 
    $ TRANSACTION='{
        "asset": {
-           "data": null,
-           "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23"
+           "data": null
        },
-       "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23",
+       "id": "68f785eec8ff920cfabd8b0ca413346c32218b812eb8ee462c0b8e6903082cb2",
        "inputs": [
            {
                "fulfillment": {
@@ -177,7 +175,7 @@ sign
        "operation": "CREATE",
        "outputs": [
            {
-               "amount": 1,
+               "amount": "1",
                "condition": {
                    "details": {
                        "bitmask": 32,
@@ -193,7 +191,7 @@ sign
                ]
            }
        ],
-       "version": "0.9"
+       "version": "0.11"
    }'
 
 
@@ -208,10 +206,9 @@ spend
 
    $ TRANSACTION='{
        "asset": {
-           "data": null,
-           "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23"
+           "data": null
        },
-       "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23",
+       "id": "68f785eec8ff920cfabd8b0ca413346c32218b812eb8ee462c0b8e6903082cb2",
        "inputs": [
            {
                "fulfillment": {
@@ -231,7 +228,7 @@ spend
        "operation": "CREATE",
        "outputs": [
            {
-               "amount": 1,
+               "amount": "1",
                "condition": {
                    "details": {
                        "bitmask": 32,
@@ -247,7 +244,7 @@ spend
                ]
            }
        ],
-       "version": "0.9"
+       "version": "0.11"
    }'
 
 
@@ -262,10 +259,9 @@ spend_with_condition_ids
 
    $ TRANSACTION='{
        "asset": {
-           "data": null,
-           "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23"
+           "data": null
        },
-       "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23",
+       "id": "68f785eec8ff920cfabd8b0ca413346c32218b812eb8ee462c0b8e6903082cb2",
        "inputs": [
            {
                "fulfillment": {
@@ -285,7 +281,7 @@ spend_with_condition_ids
        "operation": "CREATE",
        "outputs": [
            {
-               "amount": 1,
+               "amount": "1",
                "condition": {
                    "details": {
                        "bitmask": 32,
@@ -301,7 +297,7 @@ spend_with_condition_ids
                ]
            }
        ],
-       "version": "0.9"
+       "version": "0.11"
    }'
 
    $ OUTPUT_ID='[
@@ -310,6 +306,59 @@ spend_with_condition_ids
 
 
    $ bdb spend "$TRANSACTION" "$OUTPUT_ID"
+
+
+transfer
+--------
+
+
+.. code-block:: shell
+
+   $ TRANSACTION='{
+       "asset": {
+           "data": null
+       },
+       "id": "68f785eec8ff920cfabd8b0ca413346c32218b812eb8ee462c0b8e6903082cb2",
+       "inputs": [
+           {
+               "fulfillment": {
+                   "bitmask": 32,
+                   "public_key": "35qDXhZTUvna23NLc1hMfmrgPniBwPgNjko1VfQuD3vF",
+                   "signature": null,
+                   "type": "fulfillment",
+                   "type_id": 4
+               },
+               "fulfills": null,
+               "owners_before": [
+                   "35qDXhZTUvna23NLc1hMfmrgPniBwPgNjko1VfQuD3vF"
+               ]
+           }
+       ],
+       "metadata": null,
+       "operation": "CREATE",
+       "outputs": [
+           {
+               "amount": "1",
+               "condition": {
+                   "details": {
+                       "bitmask": 32,
+                       "public_key": "EnE1QD5kBY9Zrsp2Ejsp7W7ZMFAcH75SqR9wz6WrUR15",
+                       "signature": null,
+                       "type": "fulfillment",
+                       "type_id": 4
+                   },
+                   "uri": "cc:4:20:zL3F_XLRs_snrfmdqSFPqEcu-bu1xF6636oSYpNWvIw:96"
+               },
+               "public_keys": [
+                   "EnE1QD5kBY9Zrsp2Ejsp7W7ZMFAcH75SqR9wz6WrUR15"
+               ]
+           }
+       ],
+       "version": "0.11"
+   }'
+
+
+   $ bdb get_asset "$TRANSACTION"
 
 
 transfer
@@ -329,7 +378,7 @@ transfer
            },
            "fulfills": {
                "output": 0,
-               "txid": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23"
+               "txid": "68f785eec8ff920cfabd8b0ca413346c32218b812eb8ee462c0b8e6903082cb2"
            },
            "owners_before": [
                "EnE1QD5kBY9Zrsp2Ejsp7W7ZMFAcH75SqR9wz6WrUR15"
@@ -339,7 +388,7 @@ transfer
 
    $ OUTPUTS='[
        {
-           "amount": 1,
+           "amount": "1",
            "condition": {
                "details": {
                    "bitmask": 32,
@@ -357,8 +406,7 @@ transfer
    ]'
 
    $ ASSET='{
-       "data": null,
-       "id": "211230736e0b7d08af98d222c01170a45b0e3aebb10a40f07751512ed171eb23"
+       "id": "68f785eec8ff920cfabd8b0ca413346c32218b812eb8ee462c0b8e6903082cb2"
    }'
 
 
